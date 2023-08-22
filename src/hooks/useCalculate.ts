@@ -18,21 +18,21 @@ export default function useCalculate({ width, length, height, weight }: Params):
   const divisor = 5000; // default
 
   const physicalWeight = weight;
-  const volumetricWeight = RoundUp((width * length * height) / divisor);
+  const volumetricWeight = (width * length * height) / divisor;
 
   if (physicalWeight >= volumetricWeight) {
     return {
       type: "Physical",
-      weight: physicalWeight,
-      priceInGEL: physicalWeight * priceInGEL,
-      priceInUSD: physicalWeight * priceInUSD,
+      weight: RoundUp(physicalWeight),
+      priceInGEL: RoundUp(physicalWeight * priceInGEL),
+      priceInUSD: RoundUp(physicalWeight * priceInUSD),
     };
   } else {
     return {
       type: "Volumetric",
-      weight: volumetricWeight,
-      priceInGEL: volumetricWeight * priceInGEL,
-      priceInUSD: volumetricWeight * priceInUSD,
+      weight: RoundUp(volumetricWeight),
+      priceInGEL: RoundUp(volumetricWeight * priceInGEL),
+      priceInUSD: RoundUp(volumetricWeight * priceInUSD),
     };
   }
 }
