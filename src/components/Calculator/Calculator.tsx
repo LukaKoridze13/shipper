@@ -1,4 +1,4 @@
-import useCalculator from "./useCalculator";
+import useCalculator from "../Calculator/useCalculator"
 function Calculator() {
   const { data, heightCm, onClick, lengthCm, widthCm, weightKg, setLengthCm, setHeightCm, setWidthCm, setWeightKg } = useCalculator();
   return (
