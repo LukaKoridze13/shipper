@@ -1,12 +1,14 @@
-
-import LogIn from "./pages/LogIn/LogIn";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
-    <>
-   
-      <LogIn/>
-    </>
+    <div  className="w-full max-w-[1536] mx-auto">
+      <Header />
+      <Home />
+      <Footer />
+    </div>
   );
 }
 
