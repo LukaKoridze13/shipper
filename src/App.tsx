@@ -1,9 +1,9 @@
-import Benefits from "./components/Benefits/Benefits";
+import { WorkingSteps } from "./components/WorkingSteps";
 
 function App() {
   return (
     <>
-    <Benefits />
+      <WorkingSteps />
     </>
   );
 }
