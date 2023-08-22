@@ -24,6 +24,9 @@ const useCalculator = () => {
   
 }
 
+<<<<<<< HEAD
+export default useCalculator
+=======
 export default useCalculator
 
 import { useState } from "react";
@@ -57,3 +60,4 @@ const useCalculator = () => {
 
 export default useCalculator;
 
+>>>>>>> 166004b13b0401a01ad1955e6ab3d8c296a93f80
