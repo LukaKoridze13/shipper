@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {useState} from 'react'
 import useCalculate, { Result } from '../../hooks/useCalculate';
 
@@ -26,7 +25,7 @@ const useCalculator = () => {
 }
 
 export default useCalculator
-=======
+
 import { useState } from "react";
 import useCalculate, { Result } from "../../hooks/useCalculate";
 
@@ -57,4 +56,4 @@ const useCalculator = () => {
 };
 
 export default useCalculator;
->>>>>>> 5a5a2774ed5633fe4ac6c640684e99125e62191e
+
