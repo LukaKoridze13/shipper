@@ -1,9 +1,9 @@
-import {Calculator} from "./components";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <>
-      <Calculator/>
+      <Home />
     </>
   );
 }
