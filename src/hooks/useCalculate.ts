@@ -5,20 +5,20 @@ interface Params {
   weight: number;
 }
 
-interface Result {
+export interface Result {
   type: "Volumetric" | "Physical";
   weight: number;
   priceInGEL: number;
   priceInUSD: number;
 }
 
-export default function useCalculator({ width, length, height, weight }: Params): Result {
-  const priceInGEL = 2; // Default
-  const priceInUSD = 0.7; // Default
+export default function useCalculate({ width, length, height, weight }: Params): Result {
+  const priceInGEL = 24; // Default
+  const priceInUSD = 9; // Default
   const divisor = 5000; // default
 
   const physicalWeight = weight;
-  const volumetricWeight = (width * length * height) / divisor;
+  const volumetricWeight = RoundUp((width * length * height) / divisor);
 
   if (physicalWeight >= volumetricWeight) {
     return {
@@ -36,3 +36,7 @@ export default function useCalculator({ width, length, height, weight }: Params)
     };
   }
 }
+
+const RoundUp = (num: number): number => {
+  return Math.round(num * 100) / 100;
+};
