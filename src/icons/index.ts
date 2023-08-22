@@ -1,2 +1,5 @@
 export {default as StarIcon} from "./StarIcon"
 export {default as  DollarIcon} from "./DollarIcon"
+export {default as GlobeIcon} from "./GlobeIcon"
+export {default as PaymentIcon} from "./PaymentIcon"
+export {default as ShieldIcon} from "./ShieldIcon"
