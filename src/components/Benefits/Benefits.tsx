@@ -4,7 +4,7 @@ import delivery from "../../assets/international-delivery.png"
 
 const Benefits = () => {
   return (
-    <div className="w-full px-36 flex justify-between">
+    <div className="w-full px-36 flex justify-between my-14">
         <SingleBenefit text="Competetive Price">
             <div className="relative">
                 <StarIcon />
@@ -13,7 +13,6 @@ const Benefits = () => {
         </SingleBenefit>
         <SingleBenefit text="International Delivery">
             <div className="relative">
-                {/* <GlobeIcon /> */}
                 <img src={delivery} alt="" />
             </div>
         </SingleBenefit>
