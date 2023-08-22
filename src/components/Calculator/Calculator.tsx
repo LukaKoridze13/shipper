@@ -1,18 +1,7 @@
-import { useState } from "react";
-import useCalculate, { Result } from "../hooks/useCalculate";
-
+import {useCalculator} from "../../hooks"
 function Calculator() {
-  const [lengthCm, setLengthCm] = useState("");
-  const [widthCm, setWidthCm] = useState("");
-  const [heightCm, setHeightCm] = useState("");
-  const [weightKg, setWeightKg] = useState("");
-  const [data, setData] = useState<Result | null>(null);
 
-  function onClick() {
-    const data = useCalculate({ width: Number(widthCm), height: Number(heightCm), length: Number(lengthCm), weight: Number(weightKg) });
-    setData(data);
-  }
-
+  const {data,heightCm,onClick,lengthCm,widthCm,weightKg, setLengthCm,setHeightCm,setWidthCm,setWeightKg  } = useCalculator()
   return (
     <div className="flex flex-col justify-center items-center bg-black text-white pb-4 pt-4">
       <h1>გამომთვლელი</h1>
