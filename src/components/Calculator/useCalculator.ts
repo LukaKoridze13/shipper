@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import useCalculate, { Result } from './useCalculate';
+import useCalculate, { Result } from '../../hooks/useCalculate';
 
 const useCalculator = () => {
     const [lengthCm, setLengthCm] = useState("");
