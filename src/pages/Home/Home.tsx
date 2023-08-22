@@ -1,3 +1,11 @@
+import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
+import TopSection from "../../components/TopSection/TopSection";
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <>
+      <TopSection />
+      <WhyChooseUs/>
+    </>
+  );
 }

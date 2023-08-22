@@ -1,7 +1,7 @@
 import useCalculator from "./useCalculator"
-function Calculator() {
 
-  const {data,heightCm,onClick,lengthCm,widthCm,weightKg, setLengthCm,setHeightCm,setWidthCm,setWeightKg  } = useCalculator()
+function Calculator() {
+  const { data, heightCm, onClick, lengthCm, widthCm, weightKg, setLengthCm, setHeightCm, setWidthCm, setWeightKg } = useCalculator();
   return (
     <div className="flex flex-col justify-center items-center bg-black text-white pb-4 pt-4">
       <h1>გამომთვლელი</h1>
