@@ -1,17 +1,7 @@
 import Logo from "../../assets/Logo.png";
 export default function Header() {
   return (
-    <header
-      className="w-full py-5
-    
-    
-    
-    
-    
-    
-    
-    px-12 flex justify-between items-center absolute  z-10 bg-[#64B5DC]"
-    >
+    <header className="w-full py-5 px-12 flex justify-between items-center absolute  z-10 bg-[#64B5DC]">
       <img className="w-52" src={Logo} alt="Shipper Logo" />
       <nav>
         <ul className="flex gap-x-11 items-center">
