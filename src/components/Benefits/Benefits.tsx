@@ -4,7 +4,7 @@ import { StarIcon, DollarIcon } from "../../icons"
 const Benefits = () => {
   return (
     <div>
-        <SingleBenefit>
+        <SingleBenefit text="Competetive Price">
             <div className="relative">
                 <StarIcon />
                 <DollarIcon />

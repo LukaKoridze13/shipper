@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 
 export interface SingleBenefitProps  {
-    children?: ReactNode
+    children?: ReactNode;
+    text: string;
 }
