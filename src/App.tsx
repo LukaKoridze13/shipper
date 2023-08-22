@@ -1,9 +1,11 @@
-import {Calculator} from "./components";
+
+import LogIn from "./pages/LogIn/LogIn";
 
 function App() {
   return (
     <>
-      <Calculator/>
+   
+      <LogIn/>
     </>
   );
 }
