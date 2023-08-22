@@ -1,11 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 const LogIn = () => {
-  const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
-
-  const togglePasswordVisibility = () => {
-    setIsPasswordVisible((prevState) => !prevState);
-  };
+  // const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
+  const isPasswordVisible = false;
+  // const togglePasswordVisibility = () => {
+  //   setIsPasswordVisible((prevState) => !prevState);
+  // };
 
   return (
     <>
