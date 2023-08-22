@@ -9,6 +9,7 @@ export default function Home() {
       <TopSection />
       <WhyChooseUs />
       <WorkingSteps />
+      <div className="mx-[13px] bg-black h-[1px]" ></div>
       <Benefits />
     </>
   );
