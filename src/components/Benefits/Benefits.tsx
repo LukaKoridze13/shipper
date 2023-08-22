@@ -1,6 +1,6 @@
 import SingleBenefit from "./SingleBenefit"
 import { StarIcon, DollarIcon, GlobeIcon, PaymentIcon, ShieldIcon } from "../../icons"
-
+import delivery from "../../assets/international-delivery.png"
 
 const Benefits = () => {
   return (
@@ -13,7 +13,8 @@ const Benefits = () => {
         </SingleBenefit>
         <SingleBenefit text="International Delivery">
             <div className="relative">
-                <GlobeIcon />
+                {/* <GlobeIcon /> */}
+                <img src={delivery} alt="" />
             </div>
         </SingleBenefit>
         <SingleBenefit text="Secure Payment Methods">
