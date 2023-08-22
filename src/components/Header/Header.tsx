@@ -9,7 +9,6 @@ export default function Header() {
         <ul className="flex gap-x-11 items-center">
           <Li text="Price" />
           <Li text="Shops" />
-          <Li text="Turkey Shops" />
           <Li text="News" />
           <Li text="Contact us" />
         </ul>
