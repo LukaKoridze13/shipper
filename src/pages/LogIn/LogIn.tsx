@@ -1,32 +1,68 @@
-// import { useState } from "react";
+import iconVisible from "../../assets/eye-slash.svg";
+import iconInvisible from "../../assets/eye.svg";
+import { Link } from "react-router-dom";
+import usePasswordToggle from "../../hooks/usePasswordToggle";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
 const LogIn = () => {
-  // const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
-  const isPasswordVisible = false;
-  // const togglePasswordVisibility = () => {
-  //   setIsPasswordVisible((prevState) => !prevState);
-  // };
+  const [showPassword, togglePasswordVisibility] = usePasswordToggle();
 
+  const schema = yup.object().shape({
+    email: yup.string().required("required"),
+    password: yup.string().required("required"),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+    defaultValues: {
+      password: "",
+      email: "",
+    },
+  });
+
+  const onSubmit = (data: any) => {
+    console.log(data);
+  };
   return (
     <>
       <div className="h-screen flex items-center justify-center">
-        <main className="bg-[var(--color-bg)] w-1/3 h-4/6 rounded-3xl px-10 py-14 flex flex-col items-center">
+        <main className="bg-[var(--color-bg)] w-[32rem] rounded-3xl px-10 py-14 flex flex-col items-center">
           <h1 className="text-4xl font-bold py-6 self-center">Log In</h1>
-          <form className="flex flex-col gap-6">
-            <div className="flex flex-col gap-1">
+          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 w-full">
+            <div className="flex flex-col gap-1 w-full">
               <label className="label">Email</label>
-              <input type="text" placeholder="email" className="input" />
+              <input {...register("email")} type="email" placeholder="Email" className="input" />
+              {errors.email && <span className="error">{errors.email.message} </span>}
             </div>
-            <div className="flex flex-col gap-1">
+            <div className="relative flex flex-col gap-1">
               <label className="label">Password</label>
-              <input placeholder="password" className="input" type={isPasswordVisible ? "text" : "password"} />
+              <div className="flex relative">
+                <input {...register("password")} placeholder="Password" className="input" type={showPassword ? "text" : "password"} />
+                <button type="button" className="absolute top-0 right-0 h-full px-3 flex items-center" onClick={togglePasswordVisibility}>
+                  {showPassword ? <img src={iconInvisible} alt="invisible" /> : <img src={iconVisible} alt="visible" />}
+                </button>
+              </div>
+              {errors.password && <span className="error">{errors.password.message} </span>}
             </div>
-            <p className="text-lg text-[var(--color-light-gray)] underline-offset-1">Forgot Password?</p>
-            <button className="mainBtn mt-8">Log In</button>
+            <Link to="/" className="pl-2">
+              <p className="text-sm text-[var(--color-light-gray)] underline">Forgot Password?</p>
+            </Link>
+            <button type="submit" className="mainBtn mt-6">
+              Log In
+            </button>
           </form>
-          <p className="text-sm text-[var(--color-light-gray)] mt-3">
-            Don't have an account? <span className="font-bold text-sm text-[var(--color-black)]">Sign Up</span>
-          </p>
+          <div className="flex items-center justify-center gap-2 mt-3">
+            <p className="text-sm text-[var(--color-light-gray)]">Don't have an account?</p>
+            <Link to="/signup" className="font-bold text-sm text-[var(--color-black)] underline">
+              Sign Up
+            </Link>
+          </div>
         </main>
       </div>
     </>

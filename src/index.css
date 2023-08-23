@@ -8,16 +8,14 @@
     --color-white: #FFFFFF;
     --color-light-gray: #5F6767;
     --color-black:#0D0D0D;
-
-
+    --color-dark-blue: #214184;
+    --color-dark-red:#FC4747;
 }
 
 .input{
-    width:400px;
+    width:100%;
     border-radius:48px;
-    padding:16px;
-    height:50px;
-    
+    padding:16px; 
 }
 
 .label{
@@ -28,12 +26,21 @@
 }
 
 .mainBtn{
-    background-color: var(--color-yellow);
+    background-color: var(--color-dark-blue);
     border-radius:48px;
     color:var(--color-white);
-    font-size:28px;
-    width:400px;
-    height:50px;
+    font-size:24px;
+    width:100%;
     font-weight:bold;
     cursor:pointer;
+    padding:10px;
+    text-align: center;
 }
+
+.error{
+   color:var(--color-dark-red);
+   font-size:12px;
+   padding-left:10px;
+}
+
+
