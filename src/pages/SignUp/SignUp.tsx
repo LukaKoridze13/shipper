@@ -1,5 +1,5 @@
-import iconVisible from "../../assets/icons/eye-slash.svg";
-import iconInvisible from "../../assets/icons/eye.svg";
+import iconVisible from "@/assets/icons/eye-slash.svg"
+import iconInvisible from "@/assets/icons/eye.svg";
 import { Link } from "react-router-dom";
 import usePasswordToggle from "../../hooks/usePasswordToggle";
 import { useForm } from "react-hook-form";

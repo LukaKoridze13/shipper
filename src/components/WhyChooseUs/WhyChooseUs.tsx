@@ -1,4 +1,4 @@
-import whyChooseUsLogo from "../../Images/whyChooseUs.svg";
+import whyChooseUsLogo from "@/assets/icons/whyChooseUs.svg";
 
 function WhyChooseUs() {
   return (
