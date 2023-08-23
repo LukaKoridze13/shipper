@@ -1,33 +1,11 @@
-import iconVisible from "../../assets/icons/eye-slash.svg";
-import iconInvisible from "../../assets/icons/eye.svg";
+import iconVisible from "@/assets/icons/eye-slash.svg";
+import iconInvisible from "@/assets/icons/eye.svg";
 import { Link } from "react-router-dom";
-import usePasswordToggle from "../../hooks/usePasswordToggle";
-import { useForm } from "react-hook-form";
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+import useLogin from "./useLogin";
+
 
 const Login = () => {
-  const [showPassword, togglePasswordVisibility] = usePasswordToggle();
-
-  const schema = yup.object().shape({
-    email: yup.string().required("required"),
-    password: yup.string().required("required"),
-  });
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-    defaultValues: {
-      password: "",
-      email: "",
-    },
-  });
-  const onSubmit = (data: any) => {
-    console.log(data);
-  };
+  const {handleSubmit, register, errors, showPassword, togglePasswordVisibility, onSubmit} = useLogin()
   return (
     <>
       <div className="h-screen flex items-center justify-center">

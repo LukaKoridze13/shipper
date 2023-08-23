@@ -1,5 +1,4 @@
-import useCalculate, { useCalculatorReturn } from "../../hooks/useCalculate";
-import xLogo from "../../assets/icons/x-logo.svg"
+
 
 import { useState } from "react";
 function Calculator({setIsCalculatorModalOpen}: any) {
