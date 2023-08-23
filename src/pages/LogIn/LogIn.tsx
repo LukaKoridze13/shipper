@@ -6,9 +6,12 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
-const LogIn = () => {
-  const [showPassword, togglePasswordVisibility] = usePasswordToggle();
-
+const Login = () => {
+  // const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
+  const isPasswordVisible = false;
+  // const togglePasswordVisibility = () => {
+  //   setIsPasswordVisible((prevState) => !prevState);
+  // };
   const schema = yup.object().shape({
     email: yup.string().required("required"),
     password: yup.string().required("required"),
@@ -69,4 +72,4 @@ const LogIn = () => {
   );
 };
 
-export default LogIn;
+export default Login;
