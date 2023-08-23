@@ -1,6 +1,9 @@
-import SingleBenefit from "./SingleBenefit";
-import { StarIcon, DollarIcon, PaymentIcon, ShieldIcon } from "../../icons";
-import delivery from "../../assets/international-delivery.png";
+import SingleBenefit from "../components/SingleBenefit";
+import StarIcon from "../../../assets/icons/StarIcon";
+import DollarIcon from "../../../assets/icons/DollarIcon";
+import PaymentIcon from "../../../assets/icons/PaymentIcon";
+import ShieldIcon from "../../../assets/icons/ShieldIcon";
+import delivery from "../../../assets/images/international_delivery.png";
 
 const Benefits = () => {
   return (

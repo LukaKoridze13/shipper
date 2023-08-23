@@ -1,8 +1,8 @@
-import Banner from "../../assets/Banner.png";
-import payment from "../../assets/payment.svg";
-import delivery from "../../assets/delivery.svg";
-import repack from "../../assets/repack.svg";
-import calculator from "../../assets/calculator.svg";
+import Banner from "../../../assets/images/home_banner.png";
+import payment from "../../../assets/icons/payment.svg";
+import delivery from "../../../assets/icons/delivery.svg";
+import repack from "../../../assets/icons/repack.svg";
+import calculator from "../../../assets/icons/calculator.svg";
 
 interface BoxProps {
   src: string;

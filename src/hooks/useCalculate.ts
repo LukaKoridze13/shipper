@@ -1,18 +1,13 @@
-interface Params {
-  width: number;
-  height: number;
-  length: number;
-  weight: number;
-}
+import useRoundUp from "./useRoundUp";
 
-export interface Result {
+export interface useCalculatorReturn {
   type: "Volumetric" | "Physical";
   weight: number;
   priceInGEL: number;
   priceInUSD: number;
 }
 
-export default function useCalculate({ width, length, height, weight }: Params): Result {
+export default function useCalculate(width: number, length: number, height: number, weight: number): useCalculatorReturn {
   const priceInGEL = 24; // Default
   const priceInUSD = 9; // Default
   const divisor = 5000; // default
@@ -23,20 +18,16 @@ export default function useCalculate({ width, length, height, weight }: Params):
   if (physicalWeight >= volumetricWeight) {
     return {
       type: "Physical",
-      weight: RoundUp(physicalWeight),
-      priceInGEL: RoundUp(physicalWeight * priceInGEL),
-      priceInUSD: RoundUp(physicalWeight * priceInUSD),
+      weight: useRoundUp(physicalWeight, 2),
+      priceInGEL: useRoundUp(physicalWeight * priceInGEL, 2),
+      priceInUSD: useRoundUp(physicalWeight * priceInUSD, 2),
     };
   } else {
     return {
       type: "Volumetric",
-      weight: RoundUp(volumetricWeight),
-      priceInGEL: RoundUp(volumetricWeight * priceInGEL),
-      priceInUSD: RoundUp(volumetricWeight * priceInUSD),
+      weight: useRoundUp(volumetricWeight, 2),
+      priceInGEL: useRoundUp(volumetricWeight * priceInGEL, 2),
+      priceInUSD: useRoundUp(volumetricWeight * priceInUSD, 2),
     };
   }
 }
-
-const RoundUp = (num: number): number => {
-  return Math.round(num * 100) / 100;
-};
