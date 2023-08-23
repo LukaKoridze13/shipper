@@ -1,8 +1,8 @@
-import Banner from "../../assets/Banner.png";
-import payment from "../../assets/payment.svg";
-import delivery from "../../assets/delivery.svg";
-import repack from "../../assets/repack.svg";
-import calculator from "../../assets/calculator.svg";
+import Banner from "../../../assets/images/home_banner.png";
+import payment from "../../../assets/icons/payment.svg";
+import delivery from "../../../assets/icons/delivery.svg";
+import repack from "../../../assets/icons/repack.svg";
+import calculator from "../../../assets/icons/calculator.svg";
 
 interface BoxProps {
   src: string;
@@ -24,7 +24,7 @@ export default function TopSection() {
 
 const Box = ({ src, text }: BoxProps) => {
   return (
-    <div style={{ boxShadow: "0px 4px 40px 0px rgba(0, 0, 0, 0.25)" }} className="cursor-pointer bg-white flex justify-center items-center w-[281px] h-[254px] flex-col gap-6 text-[#FCCD46] text-[20px] font-sans brounded-[10px]">
+    <div style={{ boxShadow: "0px 4px 40px 0px rgba(0, 0, 0, 0.25)" }} className="cursor-pointer bg-white flex justify-center items-center w-[281px] h-[254px] flex-col gap-6 text-[#FCCD46] text-[20px] font-sans rounded-[10px]">
       <img src={src} alt={text} />
       <span>{text}</span>
     </div>

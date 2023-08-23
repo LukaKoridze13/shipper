@@ -1,10 +1,21 @@
-import { Header, TopSection } from "../../components";
+import Header from "./components/Header";
+import Wrapper from "./components/Wrapper";
+import Benefits from "./sections/Benefits";
+import Footer from "./components/Footer";
+import TopSection from "./sections/TopSection";
+import WhyChooseUs from "./sections/WhyChooseUs";
+import WorkingSteps from "./sections/WorkingSteps";
 
 export default function Home() {
   return (
-    <div className="w-full max-w-[1536] mx-auto">
+    <Wrapper>
       <Header />
       <TopSection />
-    </div>
+      <WhyChooseUs />
+      <WorkingSteps />
+      <div className="mx-[13px] bg-black h-[1px]"></div>
+      <Benefits />
+      <Footer />
+    </Wrapper>
   );
 }
