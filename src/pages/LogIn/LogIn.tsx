@@ -1,6 +1,6 @@
 // import { useState } from "react";
 
-const LogIn = () => {
+const Login = () => {
   // const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
   const isPasswordVisible = false;
   // const togglePasswordVisibility = () => {
@@ -33,4 +33,4 @@ const LogIn = () => {
   );
 };
 
-export default LogIn;
+export default Login;
