@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "../pages/home/Home";
-import Login from "../pages/login/LogIn";
-import SignUp from "../pages/signup/SignUp";
+
+import Home from "@/pages/Home/Home"
+import Login from "@/pages/LogIn/LogIn"
+import SignUp from "@/pages/SignUp/SignUp";
 
 export default function MainRouter() {
   return (

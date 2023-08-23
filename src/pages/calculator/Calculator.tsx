@@ -1,4 +1,4 @@
-import useCalculate, { useCalculatorReturn } from "../../hooks/useCalculate";
+import useCalculate, { useCalculatorReturn } from "@/hooks/useCalculate";
 
 import { useState } from "react";
 function Calculator() {
