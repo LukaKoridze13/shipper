@@ -1,17 +1,14 @@
-import iconVisible from "../../assets/eye-slash.svg";
-import iconInvisible from "../../assets/eye.svg";
+import iconVisible from "../../assets/icons/eye-slash.svg";
+import iconInvisible from "../../assets/icons/eye.svg";
 import { Link } from "react-router-dom";
 import usePasswordToggle from "../../hooks/usePasswordToggle";
 import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 const Login = () => {
-  // const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
-  const isPasswordVisible = false;
-  // const togglePasswordVisibility = () => {
-  //   setIsPasswordVisible((prevState) => !prevState);
-  // };
+  const [showPassword, togglePasswordVisibility] = usePasswordToggle();
+
   const schema = yup.object().shape({
     email: yup.string().required("required"),
     password: yup.string().required("required"),
@@ -28,7 +25,6 @@ const Login = () => {
       email: "",
     },
   });
-
   const onSubmit = (data: any) => {
     console.log(data);
   };

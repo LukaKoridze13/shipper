@@ -19,9 +19,11 @@ export default function Header() {
             Log in
           </button>{" "}
         </Link>
-        <button style={{ boxShadow: "0px 5px 10px 0px rgba(0, 0, 0, 0.23)" }} className="text-[25px] h-12 box-border px-10 rounded-3xl bg-transparent border-2 border-solid border-[#FCCD46] text-white">
-          Sign up
-        </button>
+        <Link to="/signup">
+          <button style={{ boxShadow: "0px 5px 10px 0px rgba(0, 0, 0, 0.23)" }} className="text-[25px] h-12 box-border px-10 rounded-3xl bg-transparent border-2 border-solid border-[#FCCD46] text-white">
+            Sign up
+          </button>
+        </Link>
       </div>
     </header>
   );
