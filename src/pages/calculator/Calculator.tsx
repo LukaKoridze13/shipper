@@ -1,7 +1,7 @@
-import useCalculate, { useCalculatorReturn } from "@/hooks/useCalculate";
+
 
 import { useState } from "react";
-function Calculator() {
+function Calculator({setIsCalculatorModalOpen}: any) {
   const [lengthCm, setLengthCm] = useState("");
   const [widthCm, setWidthCm] = useState("");
   const [heightCm, setHeightCm] = useState("");
@@ -14,9 +14,12 @@ function Calculator() {
   }
 
   return (
-    <div className="flex flex-col justify-start items-start bg-gray-200 text-white pb-4 pt-4 w-[656px] m-auto rounded-xl p-5">
-      <div className="flex justify-center text-center w-[576px]">
+    <div className="fixed inset-0 flex justify-between items-center bg-black bg-opacity-50">
+
+    <div className="flex flex-col justify-between items-start bg-gray-200 text-white pb-4 pt-4 w-[656px] m-auto rounded-xl p-5">
+      <div className="flex justify-between items-center text-center w-[576px]">
         <h1 className="text-black pb-16 pt-16 font-bold text-lg">Calculator</h1>
+        <img src={xLogo} onClick={() => setIsCalculatorModalOpen(false)} className="hover:cursor-pointer" />
       </div>
 
       <div className="w-[576px]">
@@ -83,6 +86,7 @@ function Calculator() {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 }
