@@ -13,7 +13,7 @@ const SignUp = () => {
     email: yup.string().required("required"),
     firstName: yup.string().required("required"),
     lastName: yup.string().required("required"),
-    number: yup.number().required("required"),
+    number: yup.string().required("required"),
     city: yup.string().required("required"),
     address: yup.string().required("required"),
     password: yup.string().required("required"),
@@ -33,7 +33,7 @@ const SignUp = () => {
       firstName: "",
       lastName: "",
       email: "",
-      number: 0,
+      number: "",
       city: "",
       address: "",
       password: "",
@@ -55,30 +55,36 @@ const SignUp = () => {
               <div className="flex flex-col gap-1 w-1/2">
                 <label className="label">First Name</label>
                 <input {...register("firstName")} type="text" placeholder="First Name" className="input" />
+                {errors.firstName && <span className="error">{errors.firstName.message} </span>}
               </div>
               <div className="flex flex-col gap-1 w-1/2">
                 <label className="label">Last Name</label>
                 <input {...register("lastName")} type="text" placeholder="Last Name" className="input" />
+                {errors.lastName && <span className="error">{errors.lastName.message} </span>}
               </div>
             </div>
             <div className="flex gap-4">
               <div className="flex flex-col gap-1 w-1/2">
                 <label className="label">Email</label>
                 <input {...register("email")} type="email" placeholder="Email" className="input" />
+                {errors.email && <span className="error">{errors.email.message} </span>}
               </div>
               <div className="flex flex-col gap-1 w-1/2">
                 <label className="label">Number</label>
-                <input {...register("number")} type="number" placeholder="557 777 777" className="input" />
+                <input {...register("number")} type="text" placeholder="557 777 777" className="input" />
+                {errors.number && <span className="error">{errors.number.message} </span>}
               </div>
             </div>
             <div className="flex gap-4">
               <div className="flex flex-col gap-1 w-1/2">
                 <label className="label">City</label>
                 <input {...register("city")} type="text" placeholder="Email" className="input" />
+                {errors.city && <span className="error">{errors.city.message} </span>}
               </div>
               <div className="flex flex-col gap-1 w-1/2">
                 <label className="label">Address</label>
                 <input {...register("address")} type="text" placeholder="Address" className="input" />
+                {errors.address && <span className="error">{errors.address.message} </span>}
               </div>
             </div>
             <div className="relative flex flex-col gap-1">
@@ -99,7 +105,7 @@ const SignUp = () => {
                   {showPassword ? <img src={iconInvisible} alt="invisible" /> : <img src={iconVisible} alt="visible" />}
                 </button>
               </div>
-              {errors.password && <span className="error">{errors.password.message} </span>}
+              {errors.confirmPassword && <span className="error">{errors.confirmPassword.message} </span>}
             </div>
             <div className="self-start flex gap-2 items-center justify-center">
               <input type="checkbox" />
